@@ -4,12 +4,17 @@ $white: #FFFFFF;
 $fade: #EEEEEE;
 $primary: #EA008E; // Peach
 $primary-fade: lighten(#EA008E,20%); // Light Peach
-$dark: #00243E; // Blue
+$dark: #4A4A4A; // Blue
 $dark-medium: #7C8F9C;
 $dark-fade: #AAB5BD; // Light Blue
 
 $light: #C4E2F5;
+$grey: #9B9B9B;
+
 $green: #10A49B;
+$pink: #FE01A5;
+$amber: #FAC058;
+$blue: #0077C3;
 
 // States
 $success: #91FE84;
@@ -90,13 +95,36 @@ h1,h2 {
   font-weight: bold;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.44;
+}
+
+.clearboth {
+  clear: both;
+}
 
 p {
-	color: $dark-medium;
+	color: $grey;
 }
 
 .white {
   background: $white;
+}
+
+.pink {
+  background: $pink;
+}
+
+.blue {
+  background: $blue;
+}
+
+.green {
+  background: $green;
+}
+
+.amber {
+  background: $amber;
 }
 
 .strong {
@@ -152,6 +180,20 @@ p {
 
 }
 
+.underlink {
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
+  color: $dark;
+  display: block;
+  margin: 15px 0;
+
+  &:hover {
+    color: lighten($dark,10%);
+  }
+
+}
+
 .col {
   flex: 1;
 
@@ -184,6 +226,17 @@ p {
 		border-color: darken($dark,10%);
 		color: $white;
 	}
+
+  &-primary {
+    background-color: $pink;
+    border-color: $pink;
+
+    &:hover {
+      background-color: darken($pink,10%);
+      border-color: darken($pink,10%);
+    }
+
+  }
 
   &-secondary {
     background-color: $green;
@@ -221,10 +274,9 @@ p {
 }
 
 .form-control {
-	font-family: 'futura';
-	height: 50px;
-	text-align: center;
+	height: 40px;
 	color: $dark;
+  margin-bottom: 20px;
 
 	&:hover, &:focus {
 		outline: none;
@@ -232,17 +284,6 @@ p {
 		border: 2px solid $primary;
 	}
 
-}
-
-// Card Shadows
-.underlink {
-  display: inline-block;
-  font-family: 'futura';
-	color: $dark;
-  font-size: 1em;
-  text-decoration: underline;
-  text-transform: uppercase;
-  margin: 30px 0;
 }
 
 .material-icons {

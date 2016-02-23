@@ -1,6 +1,7 @@
 {
     "require": {
         "drewm/mailchimp-api": "^2.1",
-        "mandrill/mandrill": "^1.0"
+        "mandrill/mandrill": "^1.0",
+        "vimeo/vimeo-api": "^1.2"
     }
 }

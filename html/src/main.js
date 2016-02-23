@@ -6,6 +6,16 @@ $(document).ready(function($){
 
   $('.header').vide('vid/patron'); // Non declarative initialization
 
+  $("#menuBtn").click(function(e) {
+    e.preventDefault();
+    $(".header__overlay").fadeIn("slow");
+  });
+
+  $("#menuClose").click(function(e) {
+    e.preventDefault();
+    $(".header__overlay").fadeOut("slow");
+  });
+
 });
 
 function resetText(value) {
