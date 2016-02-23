@@ -1,0 +1,67 @@
+
+@import 'globals';
+
+$section-padding: 20px 0;
+$section-padding-l: 40px 0;
+
+
+.header {
+	background: url("img/header-overlay.png");
+	color: $white;
+
+	&__logo {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	&__copy {
+		padding-top: 60px;
+
+		h1 {
+			margin-top: 0px;
+			font-size: 3em;
+			margin-bottom: 30px;
+		}
+
+		h2 {
+			margin-bottom: 0px;
+		}
+
+		h4 {
+				color: $light;
+		}
+
+	}
+
+	&__play {
+		padding-top: 100px;
+		width: 100%;
+		max-width: 100px;
+	}
+
+}
+
+.curve {
+	width: 100%;
+}
+
+.bar {
+	background: $white;
+	border-bottom: 1px solid $fade;
+	padding: $section-padding;
+
+	&__logo {
+		display: inline-block;
+		margin-left: 30px;
+		max-width: 75px;
+
+		&.first {
+			margin-left: 0px;
+		}
+
+	}
+}
+
+.page {
+	background: $white;
+}
