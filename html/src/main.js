@@ -1,8 +1,19 @@
 
 var $ = require('jquery');
 var vide = require('./jquery.vide.js');
+var Swiper = require('./swiper.min.js');
+
 
 $(document).ready(function($){
+
+  var mySwiper = new Swiper ('.swiper-logos', {
+      // Optional parameters
+      direction: 'horizontal',
+      slidesPerView: 2,
+      loop: true,
+      autoplay: 2500,
+      loopedSlides: 2
+    });
 
   $('.header').vide('vid/patron'); // Non declarative initialization
 
