@@ -6,6 +6,17 @@ var Swiper = require('./swiper.min.js');
 
 $(document).ready(function($){
 
+
+  $.ajax({
+		      method: "GET",
+		      url: "vimeo.php",
+		    })
+		    .done(function( response ) {
+		       json = JSON.parse(response);
+		      console.log(json.body.data);
+
+		    });
+
   var mySwiper = new Swiper ('.swiper-logos', {
       // Optional parameters
       direction: 'horizontal',
@@ -22,7 +33,13 @@ $(document).ready(function($){
     $(".header__overlay").fadeIn("slow");
   });
 
-  $("#menuClose").click(function(e) {
+  $(".header__play").click(function(e) {
+    e.preventDefault();
+    $(".header__overlay").fadeIn("slow");
+    $(".header__overlay").delay(1000).html('<iframe src="https://player.vimeo.com/video/135849812?autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+  });
+
+$("#menuClose").click(function(e) {
     e.preventDefault();
     $(".header__overlay").fadeOut("slow");
   });
